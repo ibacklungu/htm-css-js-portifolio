@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- === Meta Info === -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iback Lungu Portfolio</title>
+
+  <!-- === Google Font Link === -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- === Stylesheet === -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================== NAVIGATION =========================== -->
+  <nav id="desktop-nav" class="fixed-nav">
+    <div class="profile-pic-nav">
+      <img src="./assets/about_pic.png" alt="Profile picture" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======================== MOBILE NAVIGATION ======================= -->
+  <nav id="hamburger-nav" class="fixed-nav">
+    <div class="profile-pic-nav">
+      <img src="./assets/about_pic.png" alt="Profile picture" />
+    </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="menu-links" id="menu">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =========================== PROFILE ============================== -->
+  <section id="profile">
+    <div class="section__text">
+      <p class="typewriter">Hello I'm Iback Lungu, aspiring Data Scientist.</p>
+      <div class="btn-icon-container">
+        
+        <button class="btn btn-color-2" onclick="window.open('./assets/Iback_Lungu_Resume.pdf')">Download CV</button>
+        
+        <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Me</button>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT =============================== -->
+  <section id="about">
+    <p class="section__text_p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+
+    <div class="section-container">
+      <div class="about-detail-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <div class="heading-inline">
+              <img src="./assets/experience.png" alt="Experience icon" class="inline-icon" />
+              <h3>Experience</h3>
+            </div>
+            <p>4+ years experience in sales and platform support assistant.</p>
+          </div>
+
+          <div class="details-container">
+            <div class="heading-inline">
+              <img src="./assets/education.png" alt="Education icon" class="inline-icon" />
+              <h3>Education</h3>
+            </div>
+            <p>B.Sc. of Science In Pure Mathematics.<br>Certificate in Data Science.</p>
+          </div>
+        </div>
+
+        <div class="text-container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ut error voluptate beatae dolor nesciunt ullam sed odit magnam ipsa illum eligendi...</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Arrow -->
+    <div class="section-arrow-container">
+      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow" onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })" />
+    </div>
+  </section>
+
+  <!-- ========================== EXPERIENCE ============================ -->
+  <section id="experience">
+    <p class="section__text_p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Programming Languages</h2>
+          <div class="article-container">
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Python</h3><p>Intermediate</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>SQL</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Power BI</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>R</h3><p>Basic</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Google Sheets / Excel</h3><p>Experienced</p></div></article>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Other Tools & Skills</h2>
+          <div class="article-container">
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Statistics</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Git</h3><p>Basic</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>AWS</h3><p>Basic</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>HTML/CSS/JS</h3><p>Basic</p></div></article>
+            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Machine Learning</h3><p>Basic</p></div></article>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Arrow -->
+    <div class="section-arrow-container">
+      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })" />
+    </div>
+  </section>
+
+  <!-- ========================== PROJECTS ============================ -->
+  <section id="projects">
+    <p class="section__text_p1">Browse My</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="projects-container">
+      <!-- Project One -->
+      <div class="project-card">
+        <div class="article-container">
+          <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Project One</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
+        </div>
+      </div>
+      <!-- Project Two -->
+      <div class="project-card">
+        <div class="article-container">
+          <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Two</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
+        </div>
+      </div>
+      <!-- Project Three -->
+      <div class="project-card">
+        <div class="article-container">
+          <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
+          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
+        </div>
+      </div>
+    </div> 
+  </section>
+
+
+    <!-- ========================== CONTACT ============================ -->
+ <section id="contact">
+  <p class="section__text_p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+  
+  <div class="contact-info-upper-container">
+    <!-- Email -->
+    <div class="contact-info-container" onclick="window.open('mailto:ibacklungu888@gmail.com')">
+      <img src="assets/email.png" alt="Email">
+      <span>Email</span>
+    </div>
+    
+    <!-- LinkedIn -->
+    <div class="contact-info-container" onclick="window.open('https://www.linkedin.com/in/ibacklungu/')">
+      <img src="assets/linkedin.png" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </div>
+    
+    <!-- GitHub -->
+    <div class="contact-info-container" onclick="window.open('https://github.com/ibacklungu')">
+      <img src="assets/github.png" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+    
+    <!-- WhatsApp -->
+    <div class="contact-info-container" onclick="window.open('https://wa.me/260975135029')">
+      <img src="assets/whatsap black 2.png" alt="WhatsApp">
+      <span>WhatsApp</span>
+    </div>
+  </div>
+   <!--Return To Top-->
+  <div class="section-arrow-container">
+      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow top-arrow" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" />
+    </div>
+</section>
+
+    <!-- ============================ FOOTER ============================== -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>copyright &#169; 2025 Iback Lungu. All Rights Reserved</p>
+    </footer>
+  <!-- ============================ SCRIPT ============================== -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu-links').classList.toggle('open');
+      document.querySelector('.hamburger-icon').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
