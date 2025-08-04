@@ -16,10 +16,19 @@
         
         /* Typewriter effect for headline */
         .typewriter {
-            overflow: hidden; /* Hide overflow during animation */
-            white-space: nowrap; /* Keep text on single line */
+           display: inline-block;
+           overflow: hidden;
             animation: typing 3s steps(40, end) forwards;
-        }
+             max-width: 100%;
+             }
+
+        @media (max-width: 768px) {
+        .typewriter {
+         white-space: normal;
+         animation: none; /* disable animation on small screens */
+         }
+       }
+
         
         /* Typewriter animation keyframes */
         @keyframes typing {
@@ -89,7 +98,7 @@
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 items-center">
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
-                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Experience</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Skills</a>
                 <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
                 <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
             </nav>
@@ -116,7 +125,7 @@
                 <!-- Mobile Navigation Links -->
                 <nav class="flex flex-col space-y-4 text-center">
                     <a href="#about" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">About</a>
-                    <a href="#experience" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Experience</a>
+                    <a href="#skills" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Skills</a>
                     <a href="#projects" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Projects</a>
                     <a href="#contact" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Contact</a>
                 </nav>
@@ -233,8 +242,8 @@
 
 
 
- <!-- About Section -->
-    <section id="about" class="px-4 py-8 md:py-16">
+ <!-- Skills and Tools Section -->
+    <section id="skills" class="px-4 py-8 md:py-16">
         <p class="text-center text-gray-600 text-lg mb-2">Explore My</p>
         <h1 class="text-4xl font-bold text-center text-gray-600 mb-8 md:mb-12">Skills & Tools</h1>
 
