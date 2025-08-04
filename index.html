@@ -1,238 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- === Meta Info === -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Iback Lungu Portfolio</title>
-
-  <!-- === Google Font Link === -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- === Stylesheet === -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iback Lungu Portfolio</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for clean, modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        /* ==================== */
+        /* CUSTOM ANIMATIONS */
+        /* ==================== */
+        
+        /* Typewriter effect for headline */
+        .typewriter {
+            overflow: hidden; /* Hide overflow during animation */
+            white-space: nowrap; /* Keep text on single line */
+            animation: typing 3s steps(40, end) forwards;
+        }
+        
+        /* Typewriter animation keyframes */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* Floating arrow animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating-arrow {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Mobile menu transition */
+        .mobile-menu-container {
+            transition: transform 0.3s ease-out;
+            transform: translateX(100%);
+        }
+        .mobile-menu-container.open {
+            transform: translateX(0);
+        }
+        
+        /* ==================== */
+        /* LAYOUT ENHANCEMENTS */
+        /* ==================== */
+        
+        /* Consistent section spacing */
+        section {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding: 8rem 1rem;
+            }
+        }
+        
+        /* Max width for content containers */
+        .content-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Card styling */
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
-<body>
+<body id="top" class="bg-gray-100 font-[Inter] antialiased text-gray-800">
 
-  <!-- =========================== NAVIGATION =========================== -->
-  <nav id="desktop-nav" class="fixed-nav">
-    <div class="profile-pic-nav">
-      <img src="./assets/about_pic.png" alt="Profile picture" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Header Section with Navigation -->
+    <header class="bg-white shadow-md rounded-b-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="#profile" class="text-2xl font-bold text-indigo-600">Iback Lungu</a>
 
-  <!-- ======================== MOBILE NAVIGATION ======================= -->
-  <nav id="hamburger-nav" class="fixed-nav">
-    <div class="profile-pic-nav">
-      <img src="./assets/about_pic.png" alt="Profile picture" />
-    </div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <ul class="menu-links" id="menu">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+            </nav>
 
-  <!-- =========================== PROFILE ============================== -->
-  <section id="profile">
-    <div class="section__text">
-      <p class="typewriter">Hello I'm Iback Lungu, aspiring Data Scientist.</p>
-      <div class="btn-icon-container">
-        
-        <button class="btn btn-color-2" onclick="window.open('./assets/Iback_Lungu_Resume.pdf')">Download CV</button>
-        
-        <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Me</button>
-        
-      </div>
-    </div>
-  </section>
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="hamburger-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-600 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
 
-  <!-- ============================ ABOUT =============================== -->
-  <section id="about">
-    <p class="section__text_p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-
-    <div class="section-container">
-      <div class="about-detail-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <div class="heading-inline">
-              <img src="./assets/experience.png" alt="Experience icon" class="inline-icon" />
-              <h3>Experience</h3>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="mobile-menu-container fixed inset-y-0 right-0 w-64 bg-white shadow-lg md:hidden z-40">
+            <div class="p-6">
+                <!-- Close Button for Mobile Menu -->
+                <div class="flex justify-end mb-8">
+                    <button id="close-menu-button" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Navigation Links -->
+                <nav class="flex flex-col space-y-4 text-center">
+                    <a href="#about" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">About</a>
+                    <a href="#experience" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Experience</a>
+                    <a href="#projects" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-lg font-medium text-gray-800 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                </nav>
             </div>
-            <p>4+ years experience in sales and platform support assistant.</p>
-          </div>
-
-          <div class="details-container">
-            <div class="heading-inline">
-              <img src="./assets/education.png" alt="Education icon" class="inline-icon" />
-              <h3>Education</h3>
-            </div>
-            <p>B.Sc. of Science In Pure Mathematics.<br>Certificate in Data Science.</p>
-          </div>
         </div>
+    </header>
 
-        <div class="text-container">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ut error voluptate beatae dolor nesciunt ullam sed odit magnam ipsa illum eligendi...</p>
-        </div>
-      </div>
+    <!-- ==================== -->
+<!-- PROFILE/HERO SECTION -->
+<!-- ==================== -->
+<section id="profile" class="container mx-auto px-4 py-16 md:py-32 text-center">
+    
+    <!-- Profile Image Container -->
+    <!-- Centered circular container with subtle border and shadow -->
+    <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
+        <!-- Profile image with object-cover to maintain aspect ratio -->
+        <img src="/assets/about profile.png" 
+             alt="Iback Lungu" 
+             class="w-full h-full object-cover">
     </div>
     
-    <!-- Right Arrow -->
-    <div class="section-arrow-container">
-      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow" onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })" />
-    </div>
-  </section>
+    <!-- Headline Text -->
+    <!-- Typewriter animated headline with responsive sizing -->
+    <h1 class="text-xl sm:text-2xl font-medium text-gray-600 mt-2 mb-4 typewriter">
+        Hello, I'm an aspiring Data Scientist with a passion for turning data into actionable insights.
+    </h1>
 
-  <!-- ========================== EXPERIENCE ============================ -->
-  <section id="experience">
-    <p class="section__text_p1">Explore My</p>
-    <h1 class="title">Experience</h1>
+    <!-- Action Buttons Container -->
+    <!-- Flex container with consistent spacing between buttons -->
+    <div class="flex justify-center space-x-4 mt-6">
+        
+        <!-- Download CV Button -->
+        <!-- Button with hover effects and icon state change -->
+        <a href="./assets/Iback_Lungu_Resume.pdf" 
+           download 
+           target="_blank" 
+           class="group flex items-center space-x-2 bg-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-2 border-gray-500 w-36">
+           
+           <!-- Icon Container with state change -->
+           <div class="relative h-5 w-5 md:h-6 md:w-6">
+                <!-- Default state icon -->
+                <img src="./assets/cv_icon.webp" 
+                     alt="Download Icon"
+                     class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
+                <!-- Hover state icon -->
+                <img src="./assets/cv_icon_colored.png" 
+                     alt="Download Icon Hover"
+                     class="absolute inset-0 h-full w-full hidden group-hover:block transition duration-300" />
+           </div>
+           
+           <!-- Button Text with hover color change -->
+           <span class="font-semibold text-sm md:text-base text-black group-hover:text-indigo-600 transition-colors duration-300">
+               CV
+           </span>
+        </a>
 
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Programming Languages</h2>
-          <div class="article-container">
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Python</h3><p>Intermediate</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>SQL</h3><p>Experienced</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Power BI</h3><p>Experienced</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>R</h3><p>Basic</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Google Sheets / Excel</h3><p>Experienced</p></div></article>
-          </div>
-        </div>
-
-        <div class="details-container">
-          <h2 class="experience-sub-title">Other Tools & Skills</h2>
-          <div class="article-container">
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Statistics</h3><p>Experienced</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Git</h3><p>Basic</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>AWS</h3><p>Basic</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>HTML/CSS/JS</h3><p>Basic</p></div></article>
-            <article><img src="./assets/checkmark.png" alt="icon" class="icon" /><div><h3>Machine Learning</h3><p>Basic</p></div></article>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Right Arrow -->
-    <div class="section-arrow-container">
-      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })" />
-    </div>
-  </section>
-
-  <!-- ========================== PROJECTS ============================ -->
-  <section id="projects">
-    <p class="section__text_p1">Browse My</p>
-    <h1 class="title">Projects</h1>
-
-    <div class="projects-container">
-      <!-- Project One -->
-      <div class="project-card">
-        <div class="article-container">
-          <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-        </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
-        </div>
-      </div>
-      <!-- Project Two -->
-      <div class="project-card">
-        <div class="article-container">
-          <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-        </div>
-        <h2 class="experience-sub-title project-title">Project Two</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
-        </div>
-      </div>
-      <!-- Project Three -->
-      <div class="project-card">
-        <div class="article-container">
-          <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-        </div>
-        <h2 class="experience-sub-title project-title">Project Three</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/ibacklungu')">GitHub</button>
-          <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link.com')">Live Demo</button>
-        </div>
-      </div>
-    </div> 
-  </section>
-
-
-    <!-- ========================== CONTACT ============================ -->
- <section id="contact">
-  <p class="section__text_p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  
-  <div class="contact-info-upper-container">
-    <!-- Email -->
-    <div class="contact-info-container" onclick="window.open('mailto:ibacklungu888@gmail.com')">
-      <img src="assets/email.png" alt="Email">
-      <span>Email</span>
-    </div>
-    
-    <!-- LinkedIn -->
-    <div class="contact-info-container" onclick="window.open('https://www.linkedin.com/in/ibacklungu/')">
-      <img src="assets/linkedin.png" alt="LinkedIn">
-      <span>LinkedIn</span>
-    </div>
-    
-    <!-- GitHub -->
-    <div class="contact-info-container" onclick="window.open('https://github.com/ibacklungu')">
-      <img src="assets/github.png" alt="GitHub">
-      <span>GitHub</span>
-    </div>
-    
-    <!-- WhatsApp -->
-    <div class="contact-info-container" onclick="window.open('https://wa.me/260975135029')">
-      <img src="assets/whatsap black 2.png" alt="WhatsApp">
-      <span>WhatsApp</span>
-    </div>
-  </div>
-   <!--Return To Top-->
-  <div class="section-arrow-container">
-      <img src="./assets/arrow.png" alt="arrow icon" class="icon section-arrow top-arrow" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" />
+        <!-- Contact Button -->
+        <!-- Consistent styling with CV button -->
+        <a href="#contact" 
+           class="group flex items-center space-x-2 bg-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-2 border-gray-500 w-36">
+           
+           <!-- Icon Container with state change -->
+           <div class="relative h-5 w-5 md:h-6 md:w-6">
+                <!-- Default state icon -->
+                <img src="./assets/call-icon.png" 
+                     alt="Call Icon"
+                     class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
+                <!-- Hover state icon -->
+                <img src="./assets/all_icons.webp" 
+                     alt="All Icon Hover"
+                     class="absolute inset-0 h-full w-full hidden group-hover:block transition duration-300" />
+           </div>
+           
+           <!-- Button Text with hover color change -->
+           <span class="font-semibold text-sm md:text-base text-black group-hover:text-indigo-600 transition-colors duration-300">
+               Contact
+           </span>
+        </a>
     </div>
 </section>
 
-    <!-- ============================ FOOTER ============================== -->
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+     <!-- About Section -->
+    <section id="about" class="px-4 py-8 md:py-16">
+        <p class="text-center text-gray-600 text-lg mb-2">Get To Know More</p>
+        <h1 class="text-4xl font-bold text-center text-gray-600 mb-8 md:mb-12">About Me</h1>
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <!-- Experience Card -->
+                    <div class="mb-8 p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-inner border border-gray-200">
+                        <div class="flex flex-col items-center space-y-2 mb-2">
+                            <img src="./assets/experience-icon.jpg" alt="Experience Icon" class="h-6 w-6 object-contain" />
+                            <h3 class="text-xl font-bold text-gray-700">Experience</h3>
+                        </div>
+                        <p class="text-gray-600 text-center">4+ years experience in sales and platform support assistant.</p>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="mb-8 p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-inner border border-gray-200">
+                        <div class="flex flex-col items-center space-y-2 mb-2">
+                            <img src="./assets/Education_icon.png" alt="Education Icon" class="h-6 w-6 object-contain" />
+                            <h3 class="text-xl font-bold text-gray-700">Education</h3>
+                        </div>
+                        <p class="text-gray-600 text-center">B.Sc. in Pure Mathematics.<br>Certificate in Data Science.</p>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <p>copyright &#169; 2025 Iback Lungu. All Rights Reserved</p>
+        </div>
+    </section>
+
+
+
+
+
+
+ <!-- About Section -->
+    <section id="about" class="px-4 py-8 md:py-16">
+        <p class="text-center text-gray-600 text-lg mb-2">Explore My</p>
+        <h1 class="text-4xl font-bold text-center text-gray-600 mb-8 md:mb-12">Skills & Tools</h1>
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <!-- Experience Card -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-inner border border-gray-200">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    Programming Languages
+                </h2>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                        <span class="font-medium">Power BI</span>
+                        <div class="w-24 bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">SQL</span>
+                        <div class="w-24 bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Python</span>
+                        <div class="w-24 bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">R</span>
+                        <div class="w-24 bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Education Card -->
+                    <!-- Other Tools -->
+            <div class="bg-gray-50 p-6 rounded-xl shadow-inner border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    Other Tools & Skills
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Statistics</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Git</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">AWS</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">HTML/CSS</span>
+                    <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Excel</span>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Machine Learning</span>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <p class="text-center text-gray-500 text-lg mb-2">Browse My</p>
+            <h2 class="text-4xl font-bold text-center text-gray-600 mb-12">Projects</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-gray-600 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Project 1</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Data Analysis Project</h3>
+                        <p class="text-gray-600 mb-4">Analyzed dataset to uncover insights using Python and visualization tools.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-100 text-green-800 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Pandas</span>
+                            <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">Matplotlib</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center group">
+                            View Project
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-teal-600 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Project 2</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Database System</h3>
+                        <p class="text-gray-600 mb-4">Designed and implemented a SQL database for efficient data management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">SQL</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">MySQL</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">ER Diagrams</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center group">
+                            View Project
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-pink-600 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">Project 3</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Dashboard Visualization</h3>
+                        <p class="text-gray-600 mb-4">Created interactive business dashboards using Power BI.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-amber-100 text-yellow-800 rounded-full text-xs font-medium">Power BI</span>
+                            <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">DAX</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">Data Modeling</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center group">
+                            View Project
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+<!-- Contact Section -->
+<section id="contact" class="container mx-auto px-4 py-8 md:py-16">
+  <p class="text-center text-gray-600 text-lg mb-2">Get in Touch</p>
+  <h1 class="text-4xl font-bold text-center text-gray-600 mb-8 md:mb-12">Contact Me</h1>
+
+  <!-- Social Buttons -->
+  <div class="flex flex-wrap justify-center gap-6 mb-8">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/ibacklungu/" target="_blank"
+      class="group flex items-center space-x-2 bg-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-2 border-gray-500 w-36">
+      <img src="./assets/linkedin.png" alt="LinkedIn Icon"
+        class="h-5 w-5 md:h-6 md:w-6 block group-hover:hidden transition duration-300" />
+      <img src="./assets/linkedin_blue.png" alt="LinkedIn Blue Icon"
+        class="h-5 w-5 md:h-6 md:w-6 hidden group-hover:block transition duration-300" />
+      <span class="font-semibold text-sm md:text-base text-black group-hover:text-blue-600 transition-colors duration-300">
+        LinkedIn
+      </span>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/ibacklungu" target="_blank"
+      class="group flex items-center space-x-2 bg-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-2 border-gray-500 w-36">
+      <img src="./assets/github.png" alt="GitHub Icon"
+        class="h-5 w-5 md:h-6 md:w-6 block group-hover:hidden transition duration-300" />
+      <img src="./assets/github_purple.png" alt="GitHub Purple Icon"
+        class="h-5 w-5 md:h-6 md:w-6 hidden group-hover:block transition duration-300" />
+      <span class="font-semibold text-sm md:text-base text-black group-hover:text-purple-600 transition-colors duration-300">
+        GitHub
+      </span>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/260975135029" target="_blank"
+      class="group flex items-center space-x-2 bg-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-2 border-gray-500 w-36">
+      <img src="./assets/whatsapp_black.png" alt="WhatsApp Icon"
+        class="h-5 w-5 md:h-6 md:w-6 block group-hover:hidden transition duration-300" />
+      <img src="./assets/whatsapp _green.png" alt="WhatsApp Green Icon"
+        class="h-5 w-5 md:h-6 md:w-6 hidden group-hover:block transition duration-300" />
+      <span class="font-semibold text-sm md:text-base text-black group-hover:text-green-600 transition-colors duration-300">
+        WhatsApp
+      </span>
+    </a>
+  </div>
+
+   <!-- Contact Form -->
+    <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md border-2 border-gray-200">
+      <form class="space-y-4 text-center">
+        <div>
+          <label for="name" class="block font-medium text-gray-700">Name</label>
+          <input type="text" id="name" class="mt-1 block w-2/3 mx-auto text-center rounded-md border-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" class="mt-1 block w-2/3 mx-auto text-center rounded-md border-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" rows="4" class="mt-1 block w-2/3 mx-auto text-center rounded-md border-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="w-2/3 mx-auto flex justify-center py-2 px-4 border-2 border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
+
+  <!-- Back to Top -->
+  <div class="flex justify-center mt-12">
+    <a href="#profile" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+      Back to top
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-6 text-center">
+        <p>&copy; 2025 Iback Lungu. All Rights Reserved</p>
     </footer>
-  <!-- ============================ SCRIPT ============================== -->
-  <script>
-    function toggleMenu() {
-      document.querySelector('.menu-links').classList.toggle('open');
-      document.querySelector('.hamburger-icon').classList.toggle('open');
-    }
-  </script>
+
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
+
+        // Function to toggle the mobile menu
+        function toggleMenu() {
+            mobileMenu.classList.toggle('open');
+        }
+
+        // Add event listeners for the buttons
+        hamburgerButton.addEventListener('click', toggleMenu);
+        closeMenuButton.addEventListener('click', toggleMenu);
+
+        // Close the menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
