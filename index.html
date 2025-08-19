@@ -67,6 +67,16 @@
       }
     }
 
+    /* ===== Blinking Hamburger Menu ===== */
+    .hamburger {
+      animation: blink 3s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
     /* Smooth transition for mobile menu */
     #mobile-menu {
       transition: all 0.3s ease;
@@ -106,6 +116,7 @@
 </style>
 
 
+
 </head>
 <body class="bg-gray-100">
 
@@ -128,9 +139,10 @@
     </nav>
 
     <!-- Hamburger Button for Mobile -->
-    <button id="hamburger-button" class="md:hidden bg-transparent focus:outline-none">
-      <img src="./assets/Hamburger_icon 2.gif" alt="Menu" class="w-7 h-7" />
-    </button>
+    <!-- Hamburger Button (blinking) -->
+<button id="hamburger-button" class="md:hidden bg-transparent focus:outline-none hamburger">
+  <img src="./assets/hamburger-menu-51.png" alt="Menu" class="w-7 h-7" />
+</button>
   </div>
 
   <!-- Mobile Menu -->
