@@ -113,6 +113,18 @@
       66%  { content: '..'; }
       100% { content: '...'; }
     }
+
+
+
+    @keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 15s ease infinite;
+}
+
 </style>
 
 
@@ -122,39 +134,39 @@
 
 
 <!-- ===== HEADER START ===== -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+<header class="fixed top-0 left-0 right-0 z-50 bg-indigo-900 shadow-md">
   <div class="flex justify-between items-center px-4 py-3 md:px-8">
     
-    <!-- Logo (hovable) -->
-    <a href="#" class="text-lg md:text-xl font-bold text-gray-800 hover:text-indigo-600 transition">
+    <!-- Logo -->
+    <a href="#" class="text-lg md:text-xl font-bold text-white hover:text-amber-400 transition">
       Iback Lungu
     </a>
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="#home" class="hover:text-indigo-600">Home</a>
-      <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#projects" class="hover:text-indigo-600">Projects</a>
-      <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      <a href="#home" class="hover:text-amber-400 text-white transition">Home</a>
+      <a href="#about" class="hover:text-amber-400 text-white transition">About</a>
+      <a href="#projects" class="hover:text-amber-400 text-white transition">Projects</a>
+      <a href="#contact" class="hover:text-amber-400 text-white transition">Contact</a>
     </nav>
 
     <!-- Hamburger Button for Mobile -->
-    <!-- Hamburger Button (blinking) -->
-<button id="hamburger-button" class="md:hidden bg-transparent focus:outline-none hamburger">
-  <img src="./assets/hamburger-menu-51.png" alt="Menu" class="w-7 h-7" />
-</button>
+    <button id="hamburger-button" class="md:hidden bg-transparent focus:outline-none">
+      <img src="./assets/hamburger-menu-51.png" alt="Menu" class="w-7 h-7" />
+    </button>
   </div>
 
   <!-- Mobile Menu -->
-  <nav id="mobile-menu" class="hidden md:hidden absolute top-16 right-4 bg-gray-100 border rounded-md shadow-lg w-48 z-40">
+  <nav id="mobile-menu" class="hidden md:hidden absolute top-16 right-4 bg-indigo-900/95 border border-gray-800 rounded-md shadow-lg w-48 z-40">
     <ul class="flex flex-col text-center space-y-2 p-3">
-      <li><a href="#home" class="block hover:text-indigo-600">Home</a></li>
-      <li><a href="#about" class="block hover:text-indigo-600">About</a></li>
-      <li><a href="#projects" class="block hover:text-indigo-600">Projects</a></li>
-      <li><a href="#contact" class="block hover:text-indigo-600">Contact</a></li>
+      <li><a href="#home" class="block hover:text-amber-400 text-white">Home</a></li>
+      <li><a href="#about" class="block hover:text-amber-400 text-white">About</a></li>
+      <li><a href="#projects" class="block hover:text-amber-400 text-white">Projects</a></li>
+      <li><a href="#contact" class="block hover:text-amber-400 text-white">Contact</a></li>
     </ul>
   </nav>
 </header>
+
 
 
 <!-- ===== SCRIPT FOR MENU TOGGLE ===== -->
@@ -182,259 +194,253 @@
   });
 </script>
 <!-- ===== PROFILE/HERO SECTION ===== -->
-<section id="profile" class="container mx-auto px-4 py-16 md:py-32 text-center">
-  <!-- Profile Image -->
-  <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-indigo-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+<section id="profile" class="bg-gray-900 py-16 md:py-32 text-center">
+  <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-amber-500 shadow-lg hover:shadow-xl transition-shadow duration-300">
     <img src="/assets/p2-removebg-preview 2.png" 
          alt="Iback Lungu" 
          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
   </div>
   
-  <!-- Headline -->
-<!-- <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Iback Lungu</h1> -->
-<p class="mt-6 text-lg text-gray-700 font-medium typewriter-words">
-  <span>Hello,</span>
-  <span>I’m</span>
-  <span>an</span>
-  <span>aspiring</span>
-  <span>Data</span>
-  <span>Scientist</span>
-  <span>who</span>
-  <span>loves</span>
-  <span>exploring</span>
-  <span>the</span>
-  <span>stories</span>
-  <span>hidden</span>
-  <span>in</span>
-  <span>data</span>
-  <span>and</span>
-  <span>how</span>
-  <span>they</span>
-  <span>can</span>
-  <span>guide</span>
-  <span>decisions.</span>
-</p>
+  <p class="mt-6 text-lg text-gray-300 font-medium typewriter-words text-center">
+    <span>Hello,</span>
+    <span>I’m</span>
+    <span>an</span>
+    <span>aspiring</span>
+    <span>Data</span>
+    <span>Scientist</span>
+    <span>who</span>
+    <span>loves</span>
+    <span>exploring</span>
+    <span>the</span>
+    <span>stories</span>
+    <span>hidden</span>
+    <span>in</span>
+    <span>data</span>
+    <span>and</span>
+    <span>how</span>
+    <span>they</span>
+    <span>can</span>
+    <span>guide</span>
+    <span>decisions.</span>
+  </p>
 
-
-  <!-- Action Buttons -->
   <div class="flex flex-row flex-wrap justify-center items-center gap-4 mt-8">
-    <!-- Download CV Button -->
-    <a href=" ./assets/Iback_Lungu_Resume.pdf" 
+    <a href="./assets/Iback_Lungu_Resume.pdf" 
        download 
        target="_blank" 
-       class="group flex items-center justify-center space-x-2 bg-gray-200 hover:bg-gray-500 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-500  sm:w-auto">
+       class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
       <div class="relative h-4 w-4">
-        <img src="./assets/CV icon.png" 
+        <img src="./assets/cv_icon_white.png" 
              alt="CV Icon"
              class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
-        <img src="./assets/cv_icon_colored.png" 
+        <img src="./assets/cv_icon_amber.png" 
              alt="Download Icon Hover"
              class="absolute inset-0 h-full w-48 hidden group-hover:block transition duration-300" />
       </div>
-      <span class="font-semibold text-gray-800 group-hover:text-black-600 transition-colors duration-300">
-        
+      <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+        Download CV
       </span>
     </a>
 
-    <!-- Contact Button -->
     <a href="#contact" 
-       class="group flex items-center justify-center space-x-2 bg-gray-300 hover:bg-gray-500 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-500 sm:w-auto">
-      <div class="relative  h-4 w-4">
-        <img src="./assets/call-icon.png" 
+       class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+      <div class="relative h-4 w-4">
+        <img src="./assets/call-icon-white.png" 
              alt="Call Icon"
              class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
-        <img src="./assets/contact-icon.png" 
+        <img src="./assets/contact-icon-amber.png" 
              alt="Contact Icon"
              class="absolute inset-0 h-full w-full hidden group-hover:block transition duration-300" />
       </div>
-      <span class="font-semibold text-gray-800 group-hover:text-black-600 transition-colors duration-300">
-        
+      <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+        Contact Me
       </span>
     </a>
   </div>
 </section>
 
-<!-- ===== ABOUT SECTION ===== -->
-<section id="about" class="container mx-auto px-4 py-8 md:py-16 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <p class="text-center text-gray-500 text-lg mb-2">Get To Know More</p>
-    <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">About Me</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <!-- Experience Card -->
-      <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col">
-        <div class="flex flex-col items-center space-y-2 mb-4">
-          <img src="./assets/experience-icon.jpg" alt="Experience Icon" class="h-8 w-8 object-contain" />
-          <h3 class="text-xl font-bold text-gray-800">Experience</h3>
-        </div>
-        <div class="text-gray-600 space-y-3 text-left">
-          <p>Over the past four years, I have gained experience across sales, marketing, and platform support in diverse industries. My roles included:</p>
-          <ul class="list-disc list-inside space-y-1">
-            <li>Managing merchants and promoting the products of banks – Stanbic Bank, Zanaco.</li>
-            <li>Boosting product visibility for retail brands – Coca-Cola.</li>
-            <li>Resolving platform issues in the betting industry – supporting customers and troubleshooting technical problems at Bolabet Limited.</li>
-          </ul>
-          <p>While working in these roles, I noticed that data was often underutilized, which sparked my curiosity and inspired me to explore how insights could be leveraged to improve performance and decision-making.</p>
-        </div>
-      </div>
 
-      <!-- Education Card -->
-      <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col">
-        <div class="flex flex-col items-center space-y-2 mb-4">
-          <img src="./assets/Education_icon.png" alt="Education Icon" class="h-8 w-8 object-contain" />
-          <h3 class="text-xl font-bold text-gray-800">Education</h3>
+
+<!-- ===== ABOUT ME SECTION ===== -->
+<section id="about" class="bg-gradient-to-r from-gray-900 to-gray-800 py-12 md:py-20">
+  <div class="w-full px-2 md:px-4"> <!-- small horizontal padding for spacing -->
+    <div class="max-w-[100%] mx-auto">
+      <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
+        Get To Know More
+      </p>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12 md:mb-16">
+        About Me
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-3xl shadow-xl border-l-4 border-amber-500 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center w-full">
+          <div class="flex flex-col items-center space-y-2 mb-4">
+            <img src="./assets/experience-icon.jpg" alt="Experience Icon" class="h-12 w-12 object-contain mx-auto" />
+            <h3 class="text-2xl font-bold text-white">Experience</h3>
+          </div>
+          <div class="text-gray-300 space-y-2 leading-snug text-sm md:text-base">
+            <p>Over four years, I gained experience in:</p>
+            <ul class="list-disc list-inside mx-auto text-left" style="display:inline-block;">
+              <li>Bank product promotion – Stanbic Bank, Zanaco</li>
+              <li>Retail marketing – Coca-Cola</li>
+              <li>Platform support – Bolabet Limited</li>
+            </ul>
+            <p>This sparked my interest in data-driven decision-making.</p>
+          </div>
         </div>
-        <div class="text-gray-600 space-y-3 text-left mt-0">
-          <p>BSc in Pure Mathematics – Copperbelt University (2016–2020)</p>
-          <p>ALX Africa Data Science Programme – Currently enrolled, building practical skills in Python, SQL, Power BI, Excel, AWS, and machine learning.</p>
-          <p>I’m passionate about uncovering insights from complex information and turning them into actionable solutions that create value, improve processes, and support smarter decision-making. I’m always eager to connect with professionals who share this interest — whether to exchange ideas, collaborate on projects, or explore how data can make a meaningful impact.</p>
+        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-3xl shadow-xl border-l-4 border-amber-500 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center w-full">
+          <div class="flex flex-col items-center space-y-2 mb-4">
+            <img src="./assets/Education_icon.png" alt="Education Icon" class="h-12 w-12 object-contain mx-auto" />
+            <h3 class="text-2xl font-bold text-white">Education</h3>
+          </div>
+          <div class="text-gray-300 space-y-2 leading-snug text-sm md:text-base">
+            <p>BSc in Pure Mathematics – Copperbelt University (2016–2020)</p>
+            <p>ALX Africa Data Science Programme – Currently enrolled, building practical skills in Python, SQL, Power BI, Excel, AWS, and machine learning.</p>
+            <p>I’m passionate about uncovering insights from complex information and turning them into actionable solutions.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
 
 <!-- ===== SKILLS SECTION ===== -->
-<section id="skills" class="container mx-auto px-4 py-8 md:py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
-    <p class="text-center text-gray-500 text-lg mb-2">Explore My</p>
-    <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12">Skills & Tools</h1>
+<section id="skills" class="bg-gray-900 py-12 md:py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
+      Explore My
+    </p>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
+      Skills & Tools
+    </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <!-- Programming Languages -->
-      <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+    <!-- Grid with controlled gaps and stretched cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 items-stretch">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-3xl shadow-xl border-l-4 border-amber-500 hover:shadow-2xl transition-shadow duration-300 w-full flex flex-col">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
           </svg>
-          Programming Languages
+          Data Analysis & Visualization
         </h2>
-        <div class="space-y-4">
+        <div class="space-y-4 flex-1">
+          <!-- Skills Bars -->
           <div>
             <div class="flex justify-between items-center mb-1">
-              <span class="font-medium text-gray-700">Power BI</span>
-              <span class="text-sm text-gray-500">90%</span>
+              <span class="font-medium text-gray-300">Power BI</span>
+              <span class="text-sm text-gray-400">90%</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 90%"></div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-2.5 rounded-full" style="width: 90%"></div>
             </div>
           </div>
           <div>
             <div class="flex justify-between items-center mb-1">
-              <span class="font-medium text-gray-700">SQL</span>
-              <span class="text-sm text-gray-500">85%</span>
+              <span class="font-medium text-gray-300">SQL</span>
+              <span class="text-sm text-gray-400">85%</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between items-center mb-1">
-              <span class="font-medium text-gray-700">Python</span>
-              <span class="text-sm text-gray-500">50%</span>
-            </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-green-600 h-2.5 rounded-full" style="width: 50%"></div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-2.5 rounded-full" style="width: 85%"></div>
             </div>
           </div>
           <div>
             <div class="flex justify-between items-center mb-1">
-              <span class="font-medium text-gray-700">R</span>
-              <span class="text-sm text-gray-500">20%</span>
+              <span class="font-medium text-gray-300">Python</span>
+              <span class="text-sm text-gray-400">50%</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2.5">
-              <div class="bg-purple-600 h-2.5 rounded-full" style="width: 20%"></div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-2.5 rounded-full" style="width: 50%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-medium text-gray-300">R</span>
+              <span class="text-sm text-gray-400">20%</span>
+            </div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-2.5 rounded-full" style="width: 20%"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Other Skills -->
-      <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-3xl shadow-xl border-l-4 border-amber-500 hover:shadow-2xl transition-shadow duration-300 w-full flex flex-col">
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
           </svg>
-          Skills
+          Languages & Tools
         </h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-3 py-1.5 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Statistics</span>
-          <span class="px-3 py-1.5 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Git</span>
-          <span class="px-3 py-1.5 bg-green-100 text-green-800 rounded-full text-sm font-medium">AWS</span>
-          <span class="px-3 py-1.5 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">HTML/CSS</span>
+        <div class="flex flex-wrap gap-3 mt-auto">
+          <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Statistics</span>
+          <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Git</span>
+          <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">AWS</span>
+          <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">HTML/CSS</span>
           <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Excel</span>
-          <span class="px-3 py-1.5 bg-red-100 text-red-800 rounded-full text-sm font-medium">Machine Learning</span>
+          <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Machine Learning</span>
         </div>
       </div>
     </div>
   </div>
-</section> 
+</section>
+
+
+
+
+
 
 <!-- ===== PROJECTS SECTION ===== -->
-<section id="projects" class="container mx-auto px-4 py-8 md:py-16 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <p class="text-center text-gray-500 text-lg mb-2">Browse My</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Projects</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-      <!-- Project 1 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 border border-gray-100">
-        <div class="h-48 bg-gradient-to-br from-indigo-500 to-gray-600 flex items-center justify-center">
-          <span class="text-white text-xl font-bold">Project 1</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 text-gray-800">Data Analysis Project</h3>
-          <p class="text-gray-600 mb-4">Analyzed dataset to uncover insights using Python and visualization tools.</p>
+<section id="projects" class="bg-gray-900 py-12 md:py-20">
+  <div class="w-full px-2 md:px-4">
+    <div class="max-w-[100%] mx-auto">
+      <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
+        Browse My
+      </p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12 md:mb-16">
+        Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-3xl shadow-xl border-l-4 border-amber-500 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <h3 class="text-2xl font-bold text-white mb-2">Data Analysis Project</h3>
+          <p class="text-gray-300 mb-4">Analyzed a dataset to uncover insights using Python and visualization tools.</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-indigo-100 text-green-800 rounded-full text-xs font-medium">Python</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Pandas</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">Matplotlib</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Python</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Pandas</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Matplotlib</span>
           </div>
-          <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 group transition-colors duration-300">
-           building<span class="dot-loader ml-1">.</span>
+          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+            building<span class="dot-loader ml-1">.</span>
           </a>
         </div>
-      </div>
-      
-      <!-- Project 2 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 border border-gray-100">
-        <div class="h-48 bg-gradient-to-br from-blue-500 to-teal-600 flex items-center justify-center">
-          <span class="text-white text-xl font-bold">Project 2</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 text-gray-800">Database System</h3>
-          <p class="text-gray-600 mb-4">Designed and implemented a SQL database for efficient data management.</p>
+        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-3xl shadow-xl border-l-4 border-amber-500 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <h3 class="text-2xl font-bold text-white mb-2">Database System</h3>
+          <p class="text-gray-300 mb-4">Designed and implemented a SQL database for efficient data management.</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">SQL</span>
-            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">MySQL</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">ER Diagrams</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">SQL</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">MySQL</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">ER Diagrams</span>
           </div>
-          <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 group transition-colors duration-300">
-           building<span class="dot-loader ml-1">.</span>
+          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+            building<span class="dot-loader ml-1">.</span>
           </a>
         </div>
-      </div>
-      
-      <!-- Project 3 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 border border-gray-100">
-        <div class="h-48 bg-gradient-to-br from-amber-500 to-pink-600 flex items-center justify-center">
-          <span class="text-white text-xl font-bold">Project 3</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2 text-gray-800">Dashboard Visualization</h3>
-          <p class="text-gray-600 mb-4">Created interactive business dashboards using Power BI.</p>
+        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-3xl shadow-xl border-l-4 border-amber-500 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+          <h3 class="text-2xl font-bold text-white mb-2">Dashboard Visualization</h3>
+          <p class="text-gray-300 mb-4">Created interactive business dashboards using Power BI.</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-amber-100 text-yellow-800 rounded-full text-xs font-medium">Power BI</span>
-            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-medium">DAX</span>
-            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-xs font-medium">Data Modeling</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Power BI</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">DAX</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Data Modeling</span>
           </div>
-          <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 group transition-colors duration-300">
-           building<span class="dot-loader ml-1">.</span>
+          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+            building<span class="dot-loader ml-1">.</span>
           </a>
-
         </div>
       </div>
     </div>
@@ -442,70 +448,51 @@
 </section>
 
 <!-- ===== CONTACT SECTION ===== -->
-<section id="contact" class="container mx-auto px-4 py-8 md:py-16 bg-gray-50">
-  <div class="max-w-2xl mx-auto">
-    <p class="text-center text-gray-500 text-lg mb-2">Get in Touch</p>
-    <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12">Contact Me</h1>
-
-
-    <!-- Social Links -->
+<section id="contact" class="bg-gray-900 py-12 md:py-20">
+  <div class="max-w-2xl mx-auto px-4 md:px-0">
+    <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
+      Get in Touch
+    </p>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
+      Contact Me
+    </h1>
 
     <div class="flex flex-row flex-wrap justify-center items-center gap-4 mt-8">
-
-        <!-- WhatsApp -->
-      <a href="https://www.ibacklungu888@gmail.com" target="_blank"
-        class="group flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 px-3 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-300  sm:w-auto">
-        <img src="./assets/email 3.webp" alt="Email Icon"
-          class="h-4 w-4 block group-hover:hidden transition duration-300" />
-        <img src="./assets/email_red.png" alt="Email Red Icon"
-          class="h-4 w-4 hidden group-hover:block transition duration-300" />
-        <span class="font-medium text-gray-700 group-hover:text-red-600 transition-colors duration-300">
-        <!--Email-->    
+      <a href="mailto:ibacklungu888@gmail.com" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <img src="./assets/email_white.png" alt="Email Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
+        <img src="./assets/email_amber.png" alt="Email Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
+        <span class="font-medium text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          Email
         </span>
       </a>
 
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/iback-lungu-3217451b4" target="_blank"
-        class="group flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 px-3 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-300  sm:w-auto">
-        <img src="./assets/linkedin.png" alt="LinkedIn Icon"
-          class="h-4 w-4 block group-hover:hidden transition duration-300" />
-        <img src="./assets/linkedin_blue.png" alt="LinkedIn Blue Icon"
-          class="h-4 w-4 hidden group-hover:block transition duration-300" />
-        <span class="font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-300">
-        <!--LinkedIn-->
+      <a href="https://linkedin.com/in/iback-lungu-3217451b4" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <img src="./assets/linkedin_white.png" alt="LinkedIn Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
+        <img src="./assets/linkedin_amber.png" alt="LinkedIn Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
+        <span class="font-medium text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          LinkedIn
         </span>
       </a>
 
-      <!-- GitHub -->
-      <a href="https://github.com/ibacklungu" target="_blank"
-        class="group flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 px-3 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-300  sm:w-auto">
-        <img src="./assets/github.png" alt="GitHub Icon"
-          class="h-4 w-4 block group-hover:hidden transition duration-300" />
-        <img src="./assets/github_purple.png" alt="GitHub Purple Icon"
-          class="h-5 w-5 hidden group-hover:block transition duration-300" />
-        <span class="font-medium text-gray-700 group-hover:text-purple-600 transition-colors duration-300">
-        <!--GitHub-->
+      <a href="https://github.com/ibacklungu" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <img src="./assets/github_white.png" alt="GitHub Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
+        <img src="./assets/github_amber.png" alt="GitHub Amber Icon" class="h-5 w-5 hidden group-hover:block transition duration-300" />
+        <span class="font-medium text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          GitHub
         </span>
       </a>
 
-      <!-- WhatsApp -->
-      <a href="https://wa.me/260975135029" target="_blank"
-        class="group flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 px-3 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-300 sm:w-auto">
-        <img src="./assets/whatsapp_black.png" alt="WhatsApp Icon"
-          class="h-4 w-4 block group-hover:hidden transition duration-300" />
-        <img src="./assets/whatsapp _green.png" alt="WhatsApp Green Icon"
-          class="h-4 w-4 hidden group-hover:block transition duration-300" />
-        <span class="font-medium text-gray-700 group-hover:text-green-600 transition-colors duration-300">
-        <!--WhatsApp-->    
+      <a href="https://wa.me/260975135029" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <img src="./assets/whatsapp_white.png" alt="WhatsApp Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
+        <img src="./assets/whatsapp_amber.png" alt="WhatsApp Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
+        <span class="font-medium text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          WhatsApp
         </span>
       </a>
     </div>
 
-    
-
-    <!-- Back to Top -->
     <div class="flex justify-center mt-12">
-      <a href="#profile" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300">
+      <a href="#profile" class="flex items-center text-amber-400 hover:text-amber-500 transition-colors duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
