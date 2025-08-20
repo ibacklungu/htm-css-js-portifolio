@@ -100,6 +100,80 @@
       box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
     }
     
+    /* Uniformity Styles */
+    .section-container {
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .section-padding {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+
+
+.section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.header-offset {
+    padding-top: 5rem;
+}
+    
+    .card {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      border-left: 4px solid #f59e0b;
+      transition: all 0.3s ease;
+    }
+    
+    @media (min-width: 768px) {
+      .card {
+        padding: 2rem;
+      }
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .achievement-item {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .achievement-item:before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      color: #f59e0b;
+    }
+    
+    .highlight {
+      color: #f59e0b;
+      font-weight: 600;
+    }
+    
     /* ---------------------------------- */
     /* Responsive Styles         */
     /* ---------------------------------- */
@@ -116,15 +190,18 @@
         height: 1rem;
         width: 1rem;
       }
+      
+      .card-grid {
+        gap: 1rem;
+      }
     }
-</style>
-
+  </style>
 </head>
+
 <body class="bg-gray-100">
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
   <div class="flex justify-between items-center px-4 py-3 md:px-8">
-
     <a href="#" class="text-lg md:text-xl font-bold text-gray-800 hover:text-amber-400 transition">
       Iback Lungu
     </a>
@@ -151,154 +228,190 @@
       <li><a href="#contact" class="block hover:text-amber-400">Contact</a></li>
     </ul>
   </nav>
-  
 </header>
 
-
-
 <!-- Profile Section -->
-<section id="profile" class="bg-gray-900 py-16 md:py-32 text-center">
-  <div class="w-24 h-24 mx-auto mb-8 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg hover:shadow-xl transition-shadow duration-300">
-  <img src="/assets/p2-removebg-preview 2.png" 
-       alt="Iback Lungu" 
-       class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-</div>
-
-<div class="px-4 md:px-6"> 
-  <div class="bg-gradient-to-r from-amber-300 via-transparent to-amber-300 p-[0.4px] rounded-xl">
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-      <p id="typewriter-text" class="text-lg text-gray-300 font-medium typewriter-words text-center justify-center leading-relaxed">
-        <span style="--i:1;">Hello!</span>
-        <span style="--i:2;">I'm</span>
-        <span style="--i:3;">an</span>
-        <span style="--i:4;">aspiring</span>
-        <span style="--i:5;">Data</span>
-        <span style="--i:6;">Scientist,</span>
-        <span style="--i:7;">who's</span>
-        <span style="--i:8;">passionate</span>
-        <span style="--i:9;">about</span>
-        <span style="--i:10;">learning</span>
-        <span style="--i:11;">how</span>
-        <span style="--i:12;">to</span>
-        <span style="--i:13;">turn</span>
-        <span style="--i:14;">complex</span>
-        <span style="--i:15;">data</span>
-        <span style="--i:16;">into</span>
-        <span style="--i:17;">clear,</span>
-        <span style="--i:18;">actionable</span>
-        <span style="--i:19;">insights.</span>
-        <span style="--i:20;">I'm</span>
-        <span style="--i:21;">eager</span>
-        <span style="--i:22;">to</span>
-        <span style="--i:23;">apply</span>
-        <span style="--i:24;">my</span>
-        <span style="--i:25;">growing</span>
-        <span style="--i:26;">skills</span>
-        <span style="--i:27;">to</span>
-        <span style="--i:28;">new</span>
-        <span style="--i:29;">challenges</span>
-        <span style="--i:30;">and</span>
-        <span style="--i:31;">find</span>
-        <span style="--i:32;">stories</span>
-        <span style="--i:33;">in</span>
-        <span style="--i:34;">your</span>
-        <span style="--i:35;">data</span>
-        <span style="--i:36;">together.</span>
-      </p>
+<section id="profile" class="bg-gray-900 section-padding text-center header-offset">
+  <div class="section-container">
+    <div class="w-24 h-24 mx-auto mb-8 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <img src="/assets/p2-removebg-preview 2.png" 
+           alt="Iback Lungu" 
+           class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
     </div>
-  </div> 
-</div>
 
+    <div class="px-4 md:px-6"> 
+      <div class="bg-gradient-to-r from-amber-300 via-transparent to-amber-300 p-[0.4px] rounded-xl">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          <p id="typewriter-text" class="text-lg text-gray-300 font-medium typewriter-words text-center justify-center leading-relaxed">
+            <span style="--i:1;">Hello!</span>
+            <span style="--i:2;">I'm</span>
+            <span style="--i:3;">an</span>
+            <span style="--i:4;">aspiring</span>
+            <span style="--i:5;">Data</span>
+            <span style="--i:6;">Scientist,</span>
+            <span style="--i:7;">who's</span>
+            <span style="--i:8;">passionate</span>
+            <span style="--i:9;">about</span>
+            <span style="--i:10;">learning</span>
+            <span style="--i:11;">how</span>
+            <span style="--i:12;">to</span>
+            <span style="--i:13;">turn</span>
+            <span style="--i:14;">complex</span>
+            <span style="--i:15;">data</span>
+            <span style="--i:16;">into</span>
+            <span style="--i:17;">clear,</span>
+            <span style="--i:18;">actionable</span>
+            <span style="--i:19;">insights.</span>
+            <span style="--i:20;">I'm</span>
+            <span style="--i:21;">eager</span>
+            <span style="--i:22;">to</span>
+            <span style="--i:23;">apply</span>
+            <span style="--i:24;">my</span>
+            <span style="--i:25;">growing</span>
+            <span style="--i:26;">skills</span>
+            <span style="--i:27;">to</span>
+            <span style="--i:28;">new</span>
+            <span style="--i:29;">challenges</span>
+            <span style="--i:30;">and</span>
+            <span style="--i:31;">find</span>
+            <span style="--i:32;">stories</span>
+            <span style="--i:33;">in</span>
+            <span style="--i:34;">your</span>
+            <span style="--i:35;">data</span>
+            <span style="--i:36;">together.</span>
+          </p>
+        </div>
+      </div> 
+    </div>
 
-  <div class="flex flex-row flex-wrap justify-center items-center gap-4 mt-8">
-    <a href="./assets/Iback_Lungu_Resume.pdf" 
-       download 
-       target="_blank" 
-       class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
-      <div class="relative h-4 w-4">
-        <img src="./assets/CV icon.png" 
-             alt="CV Icon"
-             class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
-        <img src="./assets/cv_icon_colored.png" 
-             alt="Download Icon Hover"
-             class="absolute inset-0 h-full w-48 hidden group-hover:block transition duration-300" />
-      </div>
-      <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
-        Download CV
-      </span>
-    </a>
+    <div class="flex flex-row flex-wrap justify-center items-center gap-2 mt-8">
+      <a href="./assets/Iback_Lungu_Resume.pdf" 
+         download 
+         target="_blank" 
+         class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <div class="relative h-4 w-4">
+          <img src="./assets/CV icon.png" 
+               alt="CV Icon"
+               class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
+          <img src="./assets/cv_icon_colored.png" 
+               alt="Download Icon Hover"
+               class="absolute inset-0 h-full w-48 hidden group-hover:block transition duration-300" />
+        </div>
+        <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          Download CV
+        </span>
+      </a>
 
-    <a href="#contact" 
-       class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
-      <div class="relative h-4 w-4">
-        <img src="./assets/call-icon.png" 
-             alt="Call Icon"
-             class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
-        <img src="./assets/all_icons.webp" 
-             alt="Contact Icon"
-             class="absolute inset-0 h-full w-full hidden group-hover:block transition duration-300" />
-      </div>
-      <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
-        Contact Me
-      </span>
-    </a>
+      <a href="#contact" 
+         class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
+        <div class="relative h-4 w-4">
+          <img src="./assets/call-icon.png" 
+               alt="Call Icon"
+               class="absolute inset-0 h-full w-full block group-hover:hidden transition duration-300" />
+          <img src="./assets/all_icons.webp" 
+               alt="Contact Icon"
+               class="absolute inset-0 h-full w-full hidden group-hover:block transition duration-300" />
+        </div>
+        <span class="font-semibold text-gray-300 group-hover:text-amber-400 transition-colors duration-300">
+          Contact Me
+        </span>
+      </a>
+    </div>
   </div>
 </section>
 
-
 <!-- About Section -->
-<section id="about" class="bg-gradient-to-r from-gray-900 to-gray-800 py-12 md:py-20">
-  <div class="w-full px-2 md:px-4">
+<section id="about" class="bg-gradient-to-r from-gray-900 to-gray-800 section-padding">
+  <div class="section-container">
     <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
       Get To Know More
     </p>
-    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12 md:mb-16">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
       About Me
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center w-full">
-        <div class="flex flex-col items-center space-y-2 mb-4 justify-center">
-          <img src="./assets/experience.png" alt="Experience Icon" class="h-12 w-12 object-contain mx-auto" />
-          <h3 class="text-2xl font-bold text-white">Experience</h3>
-        </div>
-        <div class="text-gray-300 space-y-2 leading-snug text-sm md:text-base">
-          <p>Over four years, I gained experience in:</p>
-          <ul class="list-disc list-inside mx-auto text-left" style="display:inline-block;">
-            <li>Bank product promotion – Stanbic Bank, Zanaco</li>
-            <li>Retail marketing – Coca-Cola</li>
-            <li>Platform support – Bolabet Limited</li>
-          </ul>
-          <p>This sparked my interest in data-driven decision-making.</p>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center w-full">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 card-grid">
+      <!-- Education Card -->
+      <div class="card">
         <div class="flex flex-col items-center space-y-2 mb-4 justify-center">
           <img src="./assets/Education_icon.png" alt="Education Icon" class="h-12 w-12 object-contain mx-auto" />
           <h3 class="text-2xl font-bold text-white">Education</h3>
         </div>
-        <div class="text-gray-300 space-y-2 leading-snug text-sm md:text-base">
-          <p>BSc in Pure Mathematics – Copperbelt University (2016–2020)</p>
-          <p>ALX Africa Data Science Programme – Currently enrolled, building practical skills in Python, SQL, Power BI, Excel, AWS, and machine learning.</p>
-          <p>I’m passionate about uncovering insights from complex information and turning them into actionable solutions.</p>
+        <div class="text-gray-300 space-y-4 text-sm md:text-base text-left">
+          <div>
+            <h4 class="font-semibold text-amber-300">ALX Data Science Program</h4>
+            <p class="text-sm text-gray-400">January 2025 - Present</p>
+            <p class="mt-1">Developing expertise in Python, SQL, statistical analysis, machine learning, and data visualization to extract actionable insights from complex datasets.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-300">BSc in Pure Mathematics</h4>
+            <p class="text-sm text-gray-400">Copperbelt University | 2016-2020</p>
+            <p class="mt-1">Developed strong analytical thinking and problem-solving capabilities through advanced mathematical theory and applications.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-300">Secondary Education</h4>
+            <p class="text-sm text-gray-400">Chongwe Secondary School | Completed 2014</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Card -->
+      <div class="card">
+        <div class="flex flex-col items-center space-y-2 mb-4 justify-center">
+          <img src="./assets/experience.png" alt="Experience Icon" class="h-12 w-12 object-contain mx-auto" />
+          <h3 class="text-2xl font-bold text-white">Professional Experience</h3>
+        </div>
+        <div class="text-gray-300 space-y-4 text-sm md:text-base text-left">
+          <div>
+            <h4 class="font-semibold text-amber-300">Trade Development Representative</h4>
+            <p class="text-sm text-gray-400">Zanaco Bank</p>
+            <ul class="mt-1">
+              <li class="achievement-item">Promoted POS terminal adoption to merchants, achieving <span class="highlight">90%+ activity rate</span></li>
+              <li class="achievement-item">Expanded market penetration through strategic relationship management</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-300">Platform Support Specialist</h4>
+            <p class="text-sm text-gray-400">Bolabet Limited</p>
+            <ul class="mt-1">
+              <li class="achievement-item">Managed website operations ensuring <span class="highlight">99.9% uptime</span></li>
+              <li class="achievement-item">Approved <span class="highlight">high-value transactions</span> and coordinated with network providers</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-300">Sales Representative</h4>
+            <p class="text-sm text-gray-400">Stanbic Bank Zambia</p>
+            <ul class="mt-1">
+              <li class="achievement-item">Achieved <span class="highlight">top performance</span> in promoting mobile POS terminals</li>
+              <li class="achievement-item">Drove merchant adoption and increased transaction volumes</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-300">General Trade Merchandiser</h4>
+            <p class="text-sm text-gray-400">The Coca-Cola Company</p>
+            <ul class="mt-1">
+              <li class="achievement-item">Implemented strategic planograms to <span class="highlight">maximize product visibility</span></li>
+              <li class="achievement-item">Boosted sales through effective retail execution and stock optimization</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- Skills Section -->
-<section id="skills" class="bg-gray-900 py-12 md:py-20">
-  <div class="mw-full px-2 md:px-4">
+<section id="skills" class="bg-gray-900 section-padding">
+  <div class="section-container">
     <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
       Explore My
     </p>
-    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12 md:mb-16">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
       Skills & Tools
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2">
-      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 text-center">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 card-grid">
+      <div class="card">
         <h2 class="text-xl font-bold text-white mb-4 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -344,14 +457,15 @@
           </div>
         </div>
       </div>
-      <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 text-center">
+      
+      <div class="card">
         <h3 class="text-xl font-bold text-white mb-4 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
           </svg>
           Languages & Tools
         </h3>
-        <div class="flex flex-wrap gap-3 justify-center">
+        <div class="flex flex-wrap gap-2 justify-center">
           <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Machine Learning</span>
           <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">HTML/CSS</span>
           <span class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Statistics</span>
@@ -365,69 +479,69 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="bg-gray-900 py-12 md:py-20">
-  <div class="w-full px-2 md:px-4">
-    <div class="max-w-[100%] mx-auto">
-      <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
-        Browse My
-      </p>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12 md:mb-16">
-        Projects
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center">
-          <h3 class="text-2xl font-bold text-white mb-2">Data Analysis Project</h3>
-          <p class="text-gray-300 mb-4">Analyzed a dataset to uncover insights using Python and visualization tools.</p>
-          <div class="flex flex-wrap gap-2 mb-4 justify-center">
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Matplotlib</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">scikit-learn</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Pandas</span>
-          </div>
-          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
-            <span>building</span><span class="dot-loader ml-1">.</span>
-          </a>
+<section id="projects" class="bg-gray-900 section-padding">
+  <div class="section-container">
+    <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
+      Browse My
+    </p>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
+      Projects
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 card-grid">
+      <div class="card text-center">
+        <h3 class="text-xl font-bold text-white mb-2">Data Analysis Project</h3>
+        <p class="text-gray-300 mb-4">Analyzed a dataset to uncover insights using Python and visualization tools.</p>
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Matplotlib</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">scikit-learn</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Pandas</span>
         </div>
-        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center">
-          <h3 class="text-2xl font-bold text-white mb-2">Database System</h3>
-          <p class="text-gray-300 mb-4">Designed and implemented a SQL database for efficient data management.</p>
-          <div class="flex flex-wrap gap-2 mb-4 justify-center">
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">ER Diagrams</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">PostgreSQL</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">MySQL</span>
-          </div>
-          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
-            <span>building</span><span class="dot-loader ml-1">.</span>
-          </a>
+        <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+          <span>building</span><span class="dot-loader ml-1">.</span>
+        </a>
+      </div>
+      
+      <div class="card text-center">
+        <h3 class="text-xl font-bold text-white mb-2">Database System</h3>
+        <p class="text-gray-300 mb-4">Designed and implemented a SQL database for efficient data management.</p>
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">ER Diagrams</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">PostgreSQL</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">MySQL</span>
         </div>
-        <div class="bg-gradient-to-br from-gray-800 to-gray-700 p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-amber-300 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] text-center">
-          <h3 class="text-2xl font-bold text-white mb-2">Dashboard Visualization</h3>
-          <p class="text-gray-300 mb-4">Created interactive business dashboards using Power BI.</p>
-          <div class="flex flex-wrap gap-2 mb-4 justify-center">
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Power BI</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">DAX</span>
-            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Data Modeling</span>
-          </div>
-          <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
-            <span >building</span><span class="dot-loader ml-1">.</span>
-          </a>
+        <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+          <span>building</span><span class="dot-loader ml-1">.</span>
+        </a>
+      </div>
+      
+      <div class="card text-center">
+        <h3 class="text-xl font-bold text-white mb-2">Dashboard Visualization</h3>
+        <p class="text-gray-300 mb-4">Created interactive business dashboards using Power BI.</p>
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Power BI</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">DAX</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">Data Modeling</span>
         </div>
+        <a href="#" class="inline-flex items-center text-amber-400 font-medium hover:text-amber-500 group transition-colors duration-300">
+          <span>building</span><span class="dot-loader ml-1">.</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- Contact Section -->
-<section id="contact" class="bg-gray-900 py-12 md:py-20">
-  <div class="max-w-2xl mx-auto px-4">
+<section id="contact" class="bg-gray-900 section-padding">
+  <div class="section-container">
     <p class="text-center text-amber-400 font-semibold tracking-widest uppercase text-sm md:text-base mb-2">
       Get in Touch
     </p>
     <h1 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8 md:mb-12">
       Contact Me
     </h1>
-    <div class="flex flex-row flex-wrap justify-center items-center gap-2 mt-8">
+    
+    <div class="flex flex-row flex-wrap justify-center items-center gap-3">
       <a href="mailto:ibacklungu888@gmail.com" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
         <img src="./assets/email_red.png" alt="Email Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
         <img src="./assets/email 2.webp" alt="Email Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
@@ -435,6 +549,7 @@
           Email
         </span>
       </a>
+      
       <a href="https://linkedin.com/in/iback-lungu-3217451b4" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
         <img src="./assets/linkedin_blue.png" alt="LinkedIn Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
         <img src="./assets/linkedin.png" alt="LinkedIn Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
@@ -442,6 +557,7 @@
           LinkedIn
         </span>
       </a>
+      
       <a href="https://github.com/ibacklungu" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
         <img src="./assets/github_purple.png" alt="GitHub Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
         <img src="./assets/github.png" alt="GitHub Amber Icon" class="h-5 w-5 hidden group-hover:block transition duration-300" />
@@ -449,6 +565,7 @@
           GitHub
         </span>
       </a>
+      
       <a href="https://wa.me/260975135029" target="_blank" class="group flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600 sm:w-auto">
         <img src="./assets/whatsapp _green.png" alt="WhatsApp Icon" class="h-4 w-4 block group-hover:hidden transition duration-300" />
         <img src="./assets/whatsapp_black.png" alt="WhatsApp Amber Icon" class="h-4 w-4 hidden group-hover:block transition duration-300" />
@@ -457,6 +574,7 @@
         </span>
       </a>
     </div>
+    
     <div class="flex justify-center mt-12">
       <a href="#profile" class="flex items-center text-amber-400 hover:text-amber-500 transition-colors duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -468,18 +586,14 @@
   </div>
 </section>
 
-
-
-<!--Footer-->
+<!-- Footer -->
 <footer class="bg-white text-gray-600 py-8 text-center border-t border-gray-200">
   <div class="container mx-auto px-4">
     <p>&copy; 2025 Iback Lungu. All Rights Reserved</p>
   </div>
 </footer>
 
-
-
-<!-- js Section -->
+<!-- JavaScript Section -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   // Initialize EmailJS
@@ -509,38 +623,14 @@
       }
     });
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = {
-          name: document.getElementById('name').value,
-          email: document.getElementById('email').value,
-          message: document.getElementById('message').value
-        };
-
-        emailjs.send("service_2skmn29", "template_848pd3a", formData)
-          .then(function(response) {
-            console.log("SUCCESS!", response.status, response.text);
-            alert("Message sent successfully!");
-            contactForm.reset();
-          }, function(error) {
-            console.error("FAILED...", error);
-            alert("Failed to send message. Please try again later.");
-          });
+    // Dynamic animation script for typewriter effect
+    const wordsContainer = document.querySelector('.typewriter-words');
+    if (wordsContainer) {
+      const words = wordsContainer.querySelectorAll('span');
+      words.forEach((word, index) => {
+        word.style.animationDelay = `${index * 0.07}s`;
       });
     }
-  });
-
-  // Dynamic animation script for typewriter effect
-  document.addEventListener("DOMContentLoaded", function() {
-    const wordsContainer = document.querySelector('.typewriter-words');
-    const words = wordsContainer.querySelectorAll('span');
-    words.forEach((word, index) => {
-      word.style.animationDelay = `${index * 0.07}s`;
-    });
   });
 </script>
 
