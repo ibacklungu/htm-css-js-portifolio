@@ -1,72 +1,82 @@
-# Iback Lungu | Aspiring Data Scientist
-
+Iback Lungu | Aspiring Data Scientist
 <div align="center">
-  
-![Portfolio](https://img.shields.io/badge/🌐-Portfolio_Live-10b981?style=flat-square)
-![Data Science](https://img.shields.io/badge/📊-Aspiring_Data_Scientist-0ea5e9?style=flat-square)
-![Open to Work](https://img.shields.io/badge/💼-Open_to_Opportunities-8b5cf6?style=flat-square)
 
 </div>
 
-## 👋 About Me
-
+👋 About Me
 I'm an aspiring Data Scientist with a strong foundation in Pure Mathematics, currently enhancing my technical skills through the ALX Data Science Program. My background in advanced mathematical theory has equipped me with exceptional analytical reasoning and structured problem-solving capabilities that I apply to data challenges.
 
 I'm passionate about transforming raw data into actionable insights and building data-driven solutions.
 
-## 🛠 Skills & Technologies
+🛠 Skills & Technologies
+Programming: Python, SQL, R
+Data Analysis: Pandas, NumPy, Statistical Analysis
+Data Visualization: Power BI, Excel/Sheets, Matplotlib
+Machine Learning: Scikit-learn, Model Evaluation
+Tools: GitHub, AWS
+Soft Skills: Analytical Thinking, Problem Solving, Strategic Planning
 
-**Programming:** Python, SQL, R  
-**Data Analysis:** Pandas, NumPy, Statistical Analysis  
-**Data Visualization:** Power BI, Excel/Sheets, Matplotlib  
-**Machine Learning:** Scikit-learn, Model Evaluation  
-**Tools:** GitHub, AWS  
-**Soft Skills:** Analytical Thinking, Problem Solving, Strategic Planning
+💼 Professional Experience
+Trade Development Representative @ Zanaco Bank
 
-## 💼 Professional Experience
+Promoted POS terminal adoption, achieving 90%+ activity rate
 
-**Trade Development Representative** @ Zanaco Bank  
-- Promoted POS terminal adoption, achieving 90%+ activity rate
-- Expanded market penetration through strategic relationship management
+Expanded market penetration through strategic relationship management
 
-**Platform Support Specialist** @ Bolabet Limited  
-- Managed website operations ensuring 99.9% system uptime
-- Processed high-value transactions and coordinated with network providers
+Platform Support Specialist @ Bolabet Limited
 
-**Sales Representative** @ Stanbic Bank Zambia  
-- Achieved top performance in promoting mobile POS terminals
-- Drove merchant adoption and increased transaction volumes
+Managed website operations ensuring 99.9% system uptime
 
-**General Trade Merchandiser** @ The Coca-Cola Company  
-- Implemented strategic planograms to maximize product visibility
-- Boosted sales through effective retail execution
+Processed high-value transactions and coordinated with network providers
 
-## 🎓 Education
+Sales Representative @ Stanbic Bank Zambia
 
-**ALX Data Science Program** | *January 2025 - Present*  
-- Developing expertise in Python, SQL, machine learning, and data visualization
-- Hands-on experience with data analysis tools and techniques
+Achieved top performance in promoting mobile POS terminals
 
-**BSc in Pure Mathematics** | Copperbelt University | *2016-2020*  
-- Developed advanced analytical reasoning and problem-solving capabilities
-- Strong foundation in mathematical theory and applications
+Drove merchant adoption and increased transaction volumes
 
-**Secondary Education** | Chongwe Secondary School | *Completed 2014*  
-- Grade 12 certificate with focus on mathematics and sciences
+General Trade Merchandiser @ The Coca-Cola Company
 
-## 📞 Contact
+Implemented strategic planograms to maximize product visibility
 
+Boosted sales through effective retail execution
+
+🎓 Education
+ALX Data Science Program | January 2025 - Present
+
+Developing expertise in Python, SQL, machine learning, and data visualization
+
+Hands-on experience with data analysis tools and techniques
+
+BSc in Pure Mathematics | Copperbelt University | 2016-2020
+
+Developed advanced analytical reasoning and problem-solving capabilities
+
+Strong foundation in mathematical theory and applications
+
+Secondary Education | Chongwe Secondary School | Completed 2014
+
+Grade 12 certificate with focus on mathematics and sciences
+
+💻 This Portfolio
+This personal portfolio website was created to showcase my skills as an aspiring Data Scientist. The repository contains the source code for the site itself, which was built using the following technologies:
+
+HTML: For the structure and content of the website.
+
+CSS (Tailwind CSS): For styling, ensuring a modern and responsive design.
+
+JavaScript: For interactive elements and dynamic functionality.
+
+📞 Contact
 I'm always open to discussing data science opportunities, collaborations, or networking.
 
-**Email:** [ibacklungu888@gmail.com](mailto:ibacklungu888@gmail.com)  
-**LinkedIn:** [Iback Lungu](https://linkedin.com/in/iback-lungu-3217451b4)  
-**GitHub:** [ibacklungu](https://github.com/ibacklungu)  
-**WhatsApp:** [+260975135029](https://wa.me/260975135029)
-
----
+Email: ibacklungu888@gmail.com
+LinkedIn: Iback Lungu
+GitHub: ibacklungu
+WhatsApp: +260975135029
 
 <div align="center">
-  
-⭐ **Thank you for visiting my profile!** Feel free to reach out for collaborations or opportunities.
+
+⭐ Thank you for visiting my profile! Feel free to reach out for collaborations or opportunities.
 
 </div>
