@@ -1,47 +1,72 @@
-<div align="center">🌐 Iback Lungu | Portfolio Website</div>
+# Iback Lungu | Aspiring Data Scientist
+
 <div align="center">
-
-
-
-
-
+  
+![Portfolio](https://img.shields.io/badge/🌐-Portfolio_Live-10b981?style=flat-square)
+![Data Science](https://img.shields.io/badge/📊-Aspiring_Data_Scientist-0ea5e9?style=flat-square)
+![Open to Work](https://img.shields.io/badge/💼-Open_to_Opportunities-8b5cf6?style=flat-square)
 
 </div>
-📋 Overview
 
-This is my personal portfolio website, built to showcase my background, education, experience, and skills in data science, analytics, and mathematics.
+## 👋 About Me
 
-The portfolio is designed with a clean and professional layout, making it easy for recruiters, collaborators, and employers to navigate and learn more about me.
+I'm an aspiring Data Scientist with a strong foundation in Pure Mathematics, currently enhancing my technical skills through the ALX Data Science Program. My background in advanced mathematical theory has equipped me with exceptional analytical reasoning and structured problem-solving capabilities that I apply to data challenges.
 
-🛠️ Technologies Used
+I'm passionate about transforming raw data into actionable insights and building data-driven solutions.
 
-HTML5 → for semantic structure
+## 🛠 Skills & Technologies
 
-CSS3 (Tailwind CSS) → for styling, responsiveness, and layout
+**Programming:** Python, SQL, R  
+**Data Analysis:** Pandas, NumPy, Statistical Analysis  
+**Data Visualization:** Power BI, Excel/Sheets, Matplotlib  
+**Machine Learning:** Scikit-learn, Model Evaluation  
+**Tools:** GitHub, AWS  
+**Soft Skills:** Analytical Thinking, Problem Solving, Strategic Planning
 
-JavaScript → for interactivity (hamburger menu, smooth scrolling)
+## 💼 Professional Experience
 
-Google Fonts → for clean and modern typography
+**Trade Development Representative** @ Zanaco Bank  
+- Promoted POS terminal adoption, achieving 90%+ activity rate
+- Expanded market penetration through strategic relationship management
 
-📑 Sections Included
+**Platform Support Specialist** @ Bolabet Limited  
+- Managed website operations ensuring 99.9% system uptime
+- Processed high-value transactions and coordinated with network providers
 
-Header & Navigation → Responsive menu with desktop + mobile support
+**Sales Representative** @ Stanbic Bank Zambia  
+- Achieved top performance in promoting mobile POS terminals
+- Drove merchant adoption and increased transaction volumes
 
-About Me → Overview of who I am and my professional direction
+**General Trade Merchandiser** @ The Coca-Cola Company  
+- Implemented strategic planograms to maximize product visibility
+- Boosted sales through effective retail execution
 
-Experience & Education → Card-based layout highlighting my journey
+## 🎓 Education
 
-Contact Section → Clean form with social media links for easy reach
+**ALX Data Science Program** | *January 2025 - Present*  
+- Developing expertise in Python, SQL, machine learning, and data visualization
+- Hands-on experience with data analysis tools and techniques
 
-🎯 Purpose
+**BSc in Pure Mathematics** | Copperbelt University | *2016-2020*  
+- Developed advanced analytical reasoning and problem-solving capabilities
+- Strong foundation in mathematical theory and applications
 
-This portfolio serves as my digital resume and will also be the main hub where I showcase my upcoming data analysis and data science projects.
+**Secondary Education** | Chongwe Secondary School | *Completed 2014*  
+- Grade 12 certificate with focus on mathematics and sciences
 
-📞 Contact
+## 📞 Contact
 
-📍 Zambia
-✉️ ibacklungu888@gmail.com
+I'm always open to discussing data science opportunities, collaborations, or networking.
 
-🔗 LinkedIn
+**Email:** [ibacklungu888@gmail.com](mailto:ibacklungu888@gmail.com)  
+**LinkedIn:** [Iback Lungu](https://linkedin.com/in/iback-lungu-3217451b4)  
+**GitHub:** [ibacklungu](https://github.com/ibacklungu)  
+**WhatsApp:** [+260975135029](https://wa.me/260975135029)
 
-💻 GitHub
+---
+
+<div align="center">
+  
+⭐ **Thank you for visiting my profile!** Feel free to reach out for collaborations or opportunities.
+
+</div>
