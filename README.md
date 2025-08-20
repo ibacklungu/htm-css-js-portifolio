@@ -87,18 +87,12 @@ This repository contains my personal portfolio website developed using:
 
 ---
 
-<div align="center">
-
-📞 Contact
+<div>
 I'm always open to discussing data science opportunities, collaborations, or networking.
 
 Email: ibacklungu888@gmail.com
-LinkedIn: Iback Lungu
-GitHub: ibacklungu
-WhatsApp: +260975135029
 
 <div align="center">
 
 ⭐ Thank you for visiting my profile! Feel free to reach out for collaborations or opportunities.
-
 </div>
