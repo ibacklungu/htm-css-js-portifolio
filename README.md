@@ -64,17 +64,6 @@ I'm an aspiring Data Scientist with a strong mathematical background, currently 
 - 🗄️ **Database Systems** design and implementation
 - 📈 **Interactive Dashboards** for business intelligence
 
-## 📞 Let's Connect
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/📧-ibacklungu888@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ibacklungu888@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/💼-Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/iback-lungu-3217451b4)
-[![GitHub](https://img.shields.io/badge/🐙-Follow_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ibacklungu)
-[![WhatsApp](https://img.shields.io/badge/💬-Message_on_WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/260975135029)
-
-</div>
-
 ## 📁 Portfolio Overview
 
 This repository contains my personal portfolio website developed using:
