@@ -11,7 +11,6 @@
 
 </div>
 
-##  Hello! I'm Iback Lungu
 
 I'm an aspiring Data Scientist with a strong mathematical background, currently enrolled  in **ALX Data Science Program**. I believe data is the new language of business, and I'm passionate about translating complex information into actionable insights that drive meaningful decisions.
 
