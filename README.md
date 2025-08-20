@@ -1,82 +1,108 @@
-Iback Lungu | Aspiring Data Scientist
+# Iback Lungu | Aspiring Data Scientist
+
 <div align="center">
+
+![Portfolio Banner](https://img.shields.io/badge/🌟-Portfolio_Welcome-8b5cf6?style=for-the-badge)
+![Data Science](https://img.shields.io/badge/📊-Aspiring_Data_Scientist-0ea5e9?style=for-the-badge)
+![Mathematics](https://img.shields.io/badge/🧮-Mathematics_Background-10b981?style=for-the-badge)
+![Open to Work](https://img.shields.io/badge/💼-Open_to_Opportunities-f59e0b?style=for-the-badge)
+
+*Transforming Mathematical Rigor into Data-Driven Solutions*
 
 </div>
 
-👋 About Me
-I'm an aspiring Data Scientist with a strong foundation in Pure Mathematics, currently enhancing my technical skills through the ALX Data Science Program. My background in advanced mathematical theory has equipped me with exceptional analytical reasoning and structured problem-solving capabilities that I apply to data challenges.
+## 👋 About Me
 
-I'm passionate about transforming raw data into actionable insights and building data-driven solutions.
+I'm a **mathematics-trained professional** transitioning into data science, currently advancing my technical expertise through the **ALX Data Science Program**. My background in pure mathematics has equipped me with exceptional analytical reasoning, structured problem-solving capabilities, and the precision needed to tackle complex data challenges.
 
-🛠 Skills & Technologies
-Programming: Python, SQL, R
-Data Analysis: Pandas, NumPy, Statistical Analysis
-Data Visualization: Power BI, Excel/Sheets, Matplotlib
-Machine Learning: Scikit-learn, Model Evaluation
-Tools: GitHub, AWS
-Soft Skills: Analytical Thinking, Problem Solving, Strategic Planning
+I believe that **data tells stories** and I'm passionate about developing the skills to listen, interpret, and communicate those stories effectively through data-driven solutions.
 
-💼 Professional Experience
-Trade Development Representative @ Zanaco Bank
+## 🛠️ Skills & Technologies
 
-Promoted POS terminal adoption, achieving 90%+ activity rate
+### **Technical Stack**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
-Expanded market penetration through strategic relationship management
+### **Core Competencies**
+- **Data Analysis**: Statistical Analysis, Data Wrangling, Descriptive Analytics
+- **Data Visualization**: Dashboard Creation, Business Intelligence Reporting
+- **Machine Learning**: Predictive Modeling, Algorithm Understanding
+- **Mathematical Foundation**: Advanced Analytical Reasoning, Quantitative Analysis
 
-Platform Support Specialist @ Bolabet Limited
+### **Soft Skills**
+- Analytical Thinking & Problem Solving
+- Strategic Planning & Execution
+- Relationship Management
+- Technical Communication
 
-Managed website operations ensuring 99.9% system uptime
+## 💼 Professional Experience
 
-Processed high-value transactions and coordinated with network providers
+### **Trade Development Representative** @ Zanaco Bank
+> *Drove POS terminal adoption achieving **90%+ activity rate** through strategic merchant relationships and market expansion initiatives*
 
-Sales Representative @ Stanbic Bank Zambia
+### **Platform Support Specialist** @ Bolabet Limited  
+> *Maintained **99.9% system uptime** while managing high-value transactions and coordinating with network providers for seamless service delivery*
 
-Achieved top performance in promoting mobile POS terminals
+### **Sales Representative** @ Stanbic Bank Zambia
+> *Ranked as **top performer** in mobile POS terminal promotions, significantly increasing merchant adoption and transaction volumes*
 
-Drove merchant adoption and increased transaction volumes
+### **General Trade Merchandiser** @ The Coca-Cola Company
+> *Enhanced product visibility and boosted sales through strategic planogram implementation and inventory optimization*
 
-General Trade Merchandiser @ The Coca-Cola Company
+## 🎓 Education
 
-Implemented strategic planograms to maximize product visibility
+### **ALX Data Science Program** | *January 2025 - Present*
+> Developing comprehensive expertise in data science fundamentals including Python programming, SQL database management, statistical analysis, machine learning, and data visualization techniques.
 
-Boosted sales through effective retail execution
+### **BSc in Pure Mathematics** | Copperbelt University | *2016-2020*
+> Cultivated advanced analytical reasoning and structured problem-solving capabilities through intensive study of mathematical theory and its practical applications.
 
-🎓 Education
-ALX Data Science Program | January 2025 - Present
+### **Secondary Education** | Chongwe Secondary School | *Completed 2014*
+> Established strong academic foundation with focus on mathematics and sciences, earning Grade 12 certificate.
 
-Developing expertise in Python, SQL, machine learning, and data visualization
+## 🌐 Portfolio Website
 
-Hands-on experience with data analysis tools and techniques
+This repository contains the source code for my personal portfolio website, showcasing my journey into data science and professional background.
 
-BSc in Pure Mathematics | Copperbelt University | 2016-2020
+**Built With:**
+- **HTML5**: Semantic structure and content organization
+- **Tailwind CSS**: Modern, responsive styling framework
+- **JavaScript**: Interactive elements and dynamic functionality
+- **EmailJS**: Contact form integration
 
-Developed advanced analytical reasoning and problem-solving capabilities
+**Features:**
+- Responsive design that works on all devices
+- Smooth animations and transitions
+- Professional presentation of skills and experience
+- Easy-to-use contact methods
 
-Strong foundation in mathematical theory and applications
+## 📞 Let's Connect
 
-Secondary Education | Chongwe Secondary School | Completed 2014
-
-Grade 12 certificate with focus on mathematics and sciences
-
-💻 This Portfolio
-This personal portfolio website was created to showcase my skills as an aspiring Data Scientist. The repository contains the source code for the site itself, which was built using the following technologies:
-
-HTML: For the structure and content of the website.
-
-CSS (Tailwind CSS): For styling, ensuring a modern and responsive design.
-
-JavaScript: For interactive elements and dynamic functionality.
-
-📞 Contact
-I'm always open to discussing data science opportunities, collaborations, or networking.
-
-Email: ibacklungu888@gmail.com
-LinkedIn: Iback Lungu
-GitHub: ibacklungu
-WhatsApp: +260975135029
+I'm always interested in connecting with fellow data enthusiasts, potential collaborators, and professionals in the field.
 
 <div align="center">
 
-⭐ Thank you for visiting my profile! Feel free to reach out for collaborations or opportunities.
+[![Email](https://img.shields.io/badge/📧_Email-ibacklungu888@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ibacklungu888@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Iback_Lungu-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/iback-lungu-3217451b4)
+[![GitHub](https://img.shields.io/badge/🐙_GitHub-ibacklungu-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ibacklungu)
+[![WhatsApp](https://img.shields.io/badge/💬_WhatsApp-+260975135029-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/260975135029)
+
+</div>
+
+---
+
+<div align="center">
+
+### ⭐ *"Data is the new language of business, and I'm learning to speak it fluently."*
+
+**Thank you for visiting my profile!** I'm excited about the journey ahead in data science and look forward to connecting with you.
+
+[![Download CV](https://img.shields.io/badge/📄_Download_My_CV-F59E0B?style=for-the-badge)](./assets/Iback_Lungu_Resume.pdf)
+
+![Visitor Count](https://komarev.com/ghpvc/?username=ibacklungu&color=blueviolet&style=flat-square)
 
 </div>
